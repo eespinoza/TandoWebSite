@@ -1,0 +1,205 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900);
+
+/*Blurry*/
+.module > header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: inherit;
+  background-attachment: fixed;
+}
+.module > header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-attachment: fixed;
+  filter: blur(12px);
+}
+
+/*Text*/
+
+* {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+       margin: 0;
+}
+
+body {
+  background-image: url("tablet business 2.jpg");
+  background-attachment: fixed;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+hr {
+	border: 1px orange solid; 
+}
+
+ul {
+	list-style-type: none;
+}
+
+.box {
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  text-align: right;
+  padding: 30px;
+}
+
+.box .row.content {
+  flex: 1 1 auto;
+  border: none;
+}
+
+.bar .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.bar .navbar-toggle {
+  padding: 10px;
+}
+
+#heading {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+     url("tablet business 3.png");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+#txtoverimg {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+#Nosotros {
+    color: white;
+    padding: 8%;
+    font-size: x-large;
+    text-align: center;
+    background: rgba(34, 25, 25, .7);
+}
+
+/*Google*/
+
+#gps {
+	background: white;
+	padding: 50px;
+}
+
+#gps h1 {color: black; text-align: left;}
+
+#location {
+  width: 80%;
+  height: 500px;
+	margin: 40px auto;
+	}
+	
+/*Map*/
+
+#contactanos{
+    padding: 50px;
+    color: black;
+    background: white;
+    width: 100%;
+}
+
+#foot {
+	background: white;
+  border-top: 1px solid orange; 
+  margin-top: 60px;
+  padding:15px;
+	color: black;
+	font-size: 14px;
+}
+
+#tecnologia { 
+	color: black;
+	background: #cccccc;
+	padding: 50px;
+	margin-top: 40px;
+}
+
+#servicios {
+  color: black;
+  background: white;
+  padding: 50px;
+  margin-top: 40px;
+}
+
+/*Correo.php*/
+
+label {
+	font-weight: normal !important;
+}
+
+.btn-success {
+	margin-top: 30px;
+	width: 100%;
+}
+
+#error {
+	color: red;
+}
+
+#mail-us, #sesion, #demo {
+	margin-top: 100px;
+	text-align: center;
+	border-radius: 50px/15px;
+  background: white;
+  padding: 20px;
+}
+
+#mail-form, #login-form {
+	text-align: left;
+	display: inline-block;
+	margin: 20px;
+}
+
+#mail-form input, textarea{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#login-form input {
+  width: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#lgnd {
+	border-bottom: 1px solid orange;
+	padding-bottom: 20px;
+	color: #4d004d;
+}
+
+#success {
+	margin-top: 100px;
+}
+
+#success span {
+	font-size: 50px;
+}
+
+#yesbox {
+	border-radius: 15px 50px 30px;
+	border: 1px green solid;
+}
