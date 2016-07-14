@@ -42,23 +42,20 @@
 		<div class="container">
 			<h3>Aplicaciones</h3>
 			<p>Contamos con diversas aplicaciones en el mercado que cubren diferentes rubros:</p><br>
-			<div class="col-md-4">
+			<div class="row">
 				<ul>
-					<li><i class="fa fa-heart-o" aria-hidden="true"></i> Prevención y control de sobre peso</li><br>
-					<li><i class="fa fa-pie-chart" aria-hidden="true"></i> Gestoría de incidente</li><br>
+					<li class="col-md-4"><i class="fa fa-heart-o" aria-hidden="true"></i> Prevención y control de sobre peso</li>
+					<li class="col-md-4"><i class="fa fa-pie-chart" aria-hidden="true"></i> Gestoría de incidente</li>
+					<li class="col-md-4"><i class="fa fa-money" aria-hidden="true"></i> Gestoría de cobranza</li>
 				</ul>
 			</div>
-			<div class="col-md-4">
+			<br />
+			<div class="row">
 				<ul>
-					<li><i class="fa fa-money" aria-hidden="true"></i> Gestoría de cobranza</li><br>
-					<li><i class="fa fa-medkit" aria-hidden="true"></i> Atención médica</li><br>
+					<li class="col-md-4"><i class="fa fa-medkit" aria-hidden="true"></i> Atención médica</li>
+					<li class="col-md-4"><i class="fa fa-motorcycle" aria-hidden="true"></i> Gestoría de reparto</li>
 				</ul>
-			</div>
-			<div class="col-md-4">
-				<ul>
-					<li><i class="fa fa-motorcycle" aria-hidden="true"></i> Gestoría de reparto</li>
-				</ul>
-			</div>
+			</div>	
 		</div>
 	 </div>
 	 
@@ -66,25 +63,20 @@
 	 	<div class="container">
 		 	<h3>Servicios</h3><br>
 		 	<div class="row">
-				<div class="col-md-4">
-					<ul>
-						<li><i class="fa fa-check-square-o" aria-hidden="true"></i> Desarrollo de aplicaciones a la medida.</li><br>
-						<li><i class="fa fa-barcode" aria-hidden="true"></i> Automatización de procesos.</li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<ul>
-						<li><i class="fa fa-cloud" aria-hidden="true"></i> Sistemas SAAS (Software as a Service).</li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<ul>
-						<li><i class="fa fa-desktop" aria-hidden="true"></i> Consultoría Tecnológica e Informática.</li>
-					</ul>
-				</div>
+				<ul>
+					<li class="col-md-4"><i class="fa fa-check-square-o" aria-hidden="true"></i> Desarrollo de aplicaciones a la medida.</li>
+					<li class="col-md-4"><i class="fa fa-barcode" aria-hidden="true"></i> Automatización de procesos.</li>
+					<li class="col-md-4"><i class="fa fa-cloud" aria-hidden="true"></i> Sistemas SAAS (Software as a Service).</li>
+				</ul>
+			</div>
+			<br />
+			<div class="row">
+				<ul>
+					<li class="col-md-4"><i class="fa fa-desktop" aria-hidden="true"></i> Consultoría Tecnológica e Informática.</li>
+				</ul>
 			</div>
 		</div>
-	 </div>
+	</div>
      <div id="contactanos">
      <hr>
 	     <div class="row">
@@ -115,12 +107,27 @@
 
 <script type="text/javascript">
 $(document).ready( function() {
-	$("#Nosotros").hide();
+	$("#Nosotros, #tecnologia ul li, #servicios ul li").hide();
 	$('#txtoverimg').hide().slideDown("slow");
 	var topOfOthDiv = $("#heading").offset().top;
+	var topOfTecDiv = $("#tecnologia").offset().top;
+	var topOfSerDiv = $("#servicios").offset().top;
+	var delay = 0;
 	$(window).scroll(function() {
 		if($(window).scrollTop() > topOfOthDiv) { 
 			$("#Nosotros").fadeIn("slow");
+		}
+		
+		if($(window).scrollTop() > topOfTecDiv) {
+			for(var i = 0; i < 5; i++) {
+				delay += 300;
+				$('#tecnologia li:nth-child(' + (i + 1) +')').fadeIn(delay);
+			}
+		}
+		if($(window).scrollTop() > topOfTecDiv) {
+			for(var i = 0; i < 4; i++) {
+				$('#servicios li:nth-child(' + (i + 1) + ')').fadeIn(delay);
+			}
 		}
 	});
 });
